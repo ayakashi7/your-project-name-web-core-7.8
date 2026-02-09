@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "myfont";
+  src: url(./myfont/TTLakes-Medium.ttf);
+}
+.sidebar {
+  width: 320px;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  box-shadow: 40px 0 40px rgba(3, 3, 3, 0.274);
+  font-family: "myfont";
+  font-weight: 500;
+}
+
+/* golova */
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.logo {
+  height: 50px;
+  padding-right: 70px;
+}
+
+/* knopki */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  opacity: 0.7;
+}
+
+.btn-icon img {
+  width: 40px;
+}
+
+/* navigasia */
+.sidebar__nav {
+  flex-grow: 2;
+}
+
+.sidebar__nav li {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar__nav a {
+  text-decoration: none;
+  color: #1b1c21;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.sidebar__nav li.active a {
+  color: #7e7e82;
+}
+
+.sidebar__nav li.active {
+  border-left: 5px solid #41f6d7;
+  margin-left: -24px;
+  padding-left: 20px;
+}
+
+/* footer */
+.sidebar__footer {
+  margin-top: 200px;
+  padding-top: 32px;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* contact */
+.footer__contacts {
+  margin-bottom: 40px;
+}
+
+.email {
+  margin: 0;
+  font-size: 16px;
+  color: #1b1c21;
+  font-weight: 500;
+}
+
+.phone {
+  margin: 20px 0 0 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1b1c21;
+  line-height: 1;
+}
+
+.footer__lang {
+  display: flex;
+  gap: 12px;
+}
+
+.lang-btn {
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0;
+  color: #1b1c21;
+  text-transform: uppercase;
+}
+
+.lang-btn.active {
+  color: #7e7e82;
+}
