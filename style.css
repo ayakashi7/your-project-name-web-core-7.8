@@ -2,15 +2,22 @@
   font-family: "myfont";
   src: url(./myfont/TTLakes-Medium.ttf);
 }
+body {
+  margin: 0;
+}
 .sidebar {
   width: 320px;
   height: 100vh;
+  min-height: 200vh;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   padding: 16px 24px;
   box-sizing: border-box;
-  box-shadow: 40px 0 40px #0e185033;
+  box-shadow:
+    16px 0px 52px 0px #0e185033,
+    -2px 0px 4px 0px #454f7e05;
+
   font-family: "myfont";
   font-weight: 500;
 }
@@ -53,7 +60,7 @@
 .sidebar__nav {
   flex-grow: 2;
 }
-.sidebar__nav ul li {
+.sidebar__nav ul {
   padding-inline-start: 0;
 }
 .sidebar__nav li {
@@ -84,7 +91,13 @@
   margin-left: -24px;
   padding-left: 20px;
 }
-
+.sidebar__nav li:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(61, 236, 204, 0.978);
+  filter: brightness(1.1);
+  height: 40px;
+}
 /* footer */
 .sidebar__footer {
   margin-top: 200px;
@@ -142,20 +155,17 @@ btn-icon,
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* 2. Эффект при наведении на кнопку */
 .btn-icon:hover {
-  opacity: 1; /* Отменяем стандартную прозрачность для более яркого эффекта */
-  transform: translateY(-5px); /* Кнопка подпрыгивает вверх */
-  box-shadow: 0 5px 15px rgba(113, 8, 193, 0.874); /* Появляется мягкая розовая тень */
-  filter: brightness(1.1); /* Кнопка становится чуть ярче */
+  opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(113, 8, 193, 0.874);
+  filter: brightness(1.1);
 }
 
-/* 3. Эффект для самой картинки внутри при наведении */
 .btn-icon:hover img {
-  transform: scale(1.1); /* Иконка внутри круга немного увеличивается */
+  transform: scale(1.1);
 }
 
-/* 4. Эффект при нажатии (клик) */
 .btn-icon:active {
-  transform: translateY(0) scale(0.9); /* Кнопка пружинит обратно при клике */
+  transform: translateY(0) scale(0.9);
 }
