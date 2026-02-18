@@ -4,13 +4,13 @@
 }
 .sidebar {
   width: 320px;
-  height: 100%;
+  height: 100vh;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   padding: 16px 24px;
   box-sizing: border-box;
-  box-shadow: 40px 0 40px rgba(3, 3, 3, 0.274);
+  box-shadow: 40px 0 40px #0e185033;
   font-family: "myfont";
   font-weight: 500;
 }
@@ -53,7 +53,9 @@
 .sidebar__nav {
   flex-grow: 2;
 }
-
+.sidebar__nav ul li {
+  padding-inline-start: 0;
+}
 .sidebar__nav li {
   margin-bottom: 30px;
   display: flex;
@@ -116,6 +118,7 @@
 }
 
 .footer__lang {
+  font-family: myfont;
   display: flex;
   gap: 12px;
 }
@@ -133,4 +136,26 @@
 
 .lang-btn.active {
   color: #7e7e82;
+}
+btn-icon,
+.btn-icon img {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 2. Эффект при наведении на кнопку */
+.btn-icon:hover {
+  opacity: 1; /* Отменяем стандартную прозрачность для более яркого эффекта */
+  transform: translateY(-5px); /* Кнопка подпрыгивает вверх */
+  box-shadow: 0 5px 15px rgba(113, 8, 193, 0.874); /* Появляется мягкая розовая тень */
+  filter: brightness(1.1); /* Кнопка становится чуть ярче */
+}
+
+/* 3. Эффект для самой картинки внутри при наведении */
+.btn-icon:hover img {
+  transform: scale(1.1); /* Иконка внутри круга немного увеличивается */
+}
+
+/* 4. Эффект при нажатии (клик) */
+.btn-icon:active {
+  transform: translateY(0) scale(0.9); /* Кнопка пружинит обратно при клике */
 }
